@@ -1,0 +1,203 @@
+training135@BSLGDC-FF285 MINGW64 ~ (master)
+$ cd git_test/
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git init
+Initialized empty Git repository in C:/Users/training135/git_test/.git/
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git add README.md
+fatal: pathspec 'README.md' did not match any files
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ ls
+QA/
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ cd QA
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test/QA (master)
+$ cd..
+bash: cd..: command not found
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test/QA (master)
+$ cd ..
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ ls
+QA/
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ touch README.md
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        QA/
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git add .
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git commit -m "first commit"
+[master (root-commit) 564049f] first commit
+ Committer: training135 <training135@BirlasoftCOE.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 11 insertions(+)
+ create mode 100644 QA/app.js
+ create mode 100644 QA/index.html
+ create mode 100644 README.md
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git remote add origin https://github.com/arupchowdhary/git_test.git
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git push -u origin master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 468 bytes | 468.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/arupchowdhary/git_test.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git pull
+Already up to date.
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ touch cmd.txt
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        cmd.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git add .
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   cmd.txt
+
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git commit -m "adding cmd file"
+[master 29170f8] adding cmd file
+ Committer: training135 <training135@BirlasoftCOE.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cmd.txt
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/arupchowdhary/git_test.git
+   564049f..29170f8  master -> master
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ touch .gitignore
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ touch err.log
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git add .
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git commit -m "added ignore file"
+[master 4967432] added ignore file
+ Committer: training135 <training135@BirlasoftCOE.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 353 bytes | 353.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/arupchowdhary/git_test.git
+   29170f8..4967432  master -> master
+
+training135@BSLGDC-FF285 MINGW64 ~/git_test (master)
+$
